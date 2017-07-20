@@ -1,4 +1,4 @@
-# Audio-Stream
+# Audio-CMD-Stream
 
 Allows getting an input or output audio stream to a specific device.
 
@@ -31,7 +31,7 @@ let outputStream = new AudioStream.Output(device);
 
 ## Code Example
 ```js
-var AudioStream = require('audio-stream');
+var AudioStream = require('audio-cmd-stream');
 
 // Create a new input stream for the specified device
 let inputStream = new AudioStream.Input(device);

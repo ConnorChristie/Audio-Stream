@@ -1,5 +1,5 @@
 {
-  "name": "audio-stream",
+  "name": "audio-cmd-stream",
   "version": "1.0.0",
   "description": "Allows getting an input or output audio stream to a specific device.",
   "main": "index.js",
