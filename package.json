@@ -1,0 +1,23 @@
+{
+  "name": "audio-stream",
+  "version": "1.0.0",
+  "description": "Allows getting an input or output audio stream to a specific device.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnorChristie/Audio-Stream.git"
+  },
+  "keywords": [
+    "audio",
+    "stream"
+  ],
+  "author": "Connor Christie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ConnorChristie/Audio-Stream/issues"
+  },
+  "homepage": "https://github.com/ConnorChristie/Audio-Stream#readme"
+}
