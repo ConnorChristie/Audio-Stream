@@ -25,7 +25,7 @@ let inputStream = new AudioStream.Input(device);
 
 ### `AudioStream.Output`
 ```js
-// @device - The device id for PyAudio or the device string for arecord
+// @device - The device id for PyAudio or the device string for aplay
 let outputStream = new AudioStream.Output(device);
 ```
 
