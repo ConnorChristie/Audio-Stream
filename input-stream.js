@@ -6,10 +6,10 @@ const path = require('path');
 const util = require('util');
 const spawn = require('child_process').spawn;
 
-function AudioInputStream(device) {
+function AudioInputStream(device, args) {
     Transform.call(this);
 
-    this.process = spawnCommand(device);
+    this.process = spawnCommand(device, args || []);
 
     this.process.stdout.pipe(this);
 }
@@ -21,19 +21,19 @@ AudioInputStream.prototype._transform = function (chunk, enc, cb) {
     cb();
 };
 
-function spawnCommand(device) {
+function spawnCommand(device, additionalArgs) {
     let command;
     let args = [];
 
     switch (os.platform()) {
         case Platforms.WINDOWS:
             command = 'python';
-            args.push(path.join(__dirname, 'reader.py'), device);
+            args.push(path.join(__dirname, 'reader.py'), device, ...additionalArgs);
 
             break;
         case Platforms.LINUX:
             command = 'aplay';
-            args.push('-D', device);
+            args.push('-D', device, ...additionalArgs);
 
             break;
     }
