@@ -12,7 +12,7 @@ Aplay and arecord to be installed, should come with linux by default
 
 ## Installation
 ```
-npm i audio-stream -S
+npm i audio-cmd-stream -S
 ```
 
 ## API
