@@ -19,13 +19,13 @@ npm i audio-stream -S
 
 ### `AudioStream.Input`
 ```js
-// @device - The device id for PyAudio and the device string for arecord
+// @device - The device id for PyAudio or the device string for arecord
 let inputStream = new AudioStream.Input(device);
 ```
 
 ### `AudioStream.Output`
 ```js
-// @device - The device id for PyAudio and the device string for arecord
+// @device - The device id for PyAudio or the device string for arecord
 let outputStream = new AudioStream.Output(device);
 ```
 
