@@ -32,7 +32,7 @@ function spawnCommand(device, additionalArgs) {
 
             break;
         case Platforms.LINUX:
-            command = 'arecord';
+            command = 'aplay';
             args.push('-D', device, ...additionalArgs);
 
             break;

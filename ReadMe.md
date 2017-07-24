@@ -20,21 +20,23 @@ npm i audio-cmd-stream -S
 ### `AudioStream.Input`
 ```js
 // @device - The device id for PyAudio or the device string for arecord
-let inputStream = new AudioStream.Input(device);
+// @args - Additional arguments passed to the spawn command
+let inputStream = new AudioStream.Input(device, args);
 ```
 
 ### `AudioStream.Output`
 ```js
 // @device - The device id for PyAudio or the device string for aplay
-let outputStream = new AudioStream.Output(device);
+// @args - Additional arguments passed to the spawn command
+let outputStream = new AudioStream.Output(device, args);
 ```
 
 ## Code Example
 ```js
 var AudioStream = require('audio-cmd-stream');
 
-// Create a new input stream for the specified device
-let inputStream = new AudioStream.Input(device);
+// Create a new input stream for the specified device using the specified additional arguments that are passed to arecord
+let inputStream = new AudioStream.Input(device, ['-f', 'cd', '-t', 'raw']);
 
 // Create a new output stream for the specified device
 let outputStream = new AudioStream.Output(device);
