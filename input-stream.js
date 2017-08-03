@@ -21,6 +21,10 @@ AudioInputStream.prototype._transform = function (chunk, enc, cb) {
     cb();
 };
 
+AudioInputStream.prototype.kill = function () {
+    this.process.kill();
+};
+
 function spawnCommand(device, additionalArgs) {
     let command;
     let args = [];
